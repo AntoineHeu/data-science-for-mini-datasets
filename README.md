@@ -3,6 +3,6 @@ Applying data-science and ML concepts to small datasets is highly discutable but
 This repository aims to share with you some ML application I have been using as part of my job in the environmental industry. The code is oriented toward realy small datasets: from 15 to 50 observations.
 
 # Code
-edited on spyder via Anaconda.
+Edited on spyder via Anaconda.
 Mostly based on the importation of csv files -> as DataFrame objects.
 Because datasets are small a few check steps consist on having a direct observation of the data throughout the process.
