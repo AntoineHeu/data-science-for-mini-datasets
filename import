@@ -1,0 +1,29 @@
+#import libraries needed
+
+import csv
+import pandas as pd
+import numpy as np
+import math
+import matplotlib.pyplot as plt
+import seaborn as sns
+sns.set()
+import sys
+print(sys.executable)
+import warnings
+import pickle
+
+if not sys.warnoptions:
+    warnings.simplefilter("ignore")
+
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import GridSearchCV, RepeatedKFold, RepeatedStratifiedKFold
+from sklearn.linear_model import ElasticNet, Lasso
+from sklearn.covariance import EllipticEnvelope
+from sklearn.svm import OneClassSVM
+
+import matplotlib.font_manager
+matplotlib.rcParams.update({'font.size': 20})
+font = {'family' : 'normal',
+        'weight' : 'bold',
+        'size'   : 20}
+matplotlib.rc('font', **font)
