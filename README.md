@@ -1,8 +1,13 @@
-# data-science-for-mini-datasets
-Applying data-science and ML concepts to small datasets is highly discutable but I would argue that even the small one can benefit from it - if the user keeps in mind that the results are to be taken with a grain of salt.
-This repository aims to share with you some ML application I have been using as part of my job in the environmental industry. The code is oriented toward realy small datasets: from 15 to 50 observations.
+# Branch Prediction on skewed datasets
+This branch contains the functions and code used in the prediction of skewed datasets.
+This is based on the prediction of continuous data such as concentrations of metals in soils for example
 
-# Code
+# Architecture
 Edited on spyder via Anaconda.
-Mostly based on the importation of csv files -> as DataFrame objects.
-Because datasets are small a few check steps consist on having a direct observation of the data throughout the process.
+Based on the importation of csv files -> as DataFrame objects.
+
+1.anomaly detection on the dataset to train 3 different types of anomaly detection algorithm
+2. reading through the file containing the data - prediction on samples if inliers or outliers
+3. if sample is an inlier specific model (ElastiicNet) fitted and used for the prediction
+4. if sample is an outlier the global model (ELasticNet) is used for the prediction
+5. storing data in new csv - samples identified with here "drillhole_ID"
