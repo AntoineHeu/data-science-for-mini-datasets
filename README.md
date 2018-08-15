@@ -17,6 +17,8 @@ Based on the importation of csv files -> as DataFrame objects.
 - final predicted value is a weighted average (weights are a probability of being either an outlier or an inlier given the results of the 3 anomaly detection models fitted)
 - storing data in new csv - samples identified with here "drillhole_ID"
 
+> steps of the entire program has been fragmented here for a better visibility. predict_csv.py however needs to be related to the other fragments of the code to work.
+
 # Philosophy
 The idea behind the code is that:
 - we have a limited dataset with very few points we can base our model one
@@ -26,4 +28,4 @@ The idea behind the code is that:
 - prediction of the target value for outliers is the linear model (ElasticNet) fitted to the entire dataset
 - prediction of the target value for inliers is the lineat model (ElasticNet) fitted to the inliers elements
 
-# In the context of the prediction of concentrations in soils I usually consider the result coherent if the histogram of the full set of values (raw + modelized) is similar to the histogram of the raw values
+> In the context of the prediction of concentrations in soils I usually consider the result coherent if the histogram of the full set of values (raw + modelized) is similar to the histogram of the raw values
