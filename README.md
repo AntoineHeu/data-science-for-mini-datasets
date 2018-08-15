@@ -10,3 +10,15 @@ Because datasets are small a few check steps consist on having a direct observat
 # Disclaimer
 This is a first approach on solving the problem of small dataset. 
 - Codes here are to be taken as draft so do not hesitate to point out incoherency and improvements points
+
+# Programs proposed
+the codes presented here are:
+- prediction_skewed
+  - predicts continuous values
+  - values to predict are separated between inliers, which have there own ElasticNet (scikitlearn) model and outliers, which have a different Elasticnet (scikitlearn) model
+  - First steps is to predict if the value is either an outlier or an inlier (modelized as a probability: 3 anomaly detection algorithms are fitted so probabilities ranges in O, O.33, O.66 or 1)
+  - the predicted value is a weighted average of the models for outliers and inliers - weights being the probability of being an outlier or an inlier
+
+- to be continued...
+
+For more additionnal elements on the programs, please visit the branch associated to the program of interest
