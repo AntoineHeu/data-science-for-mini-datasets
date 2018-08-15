@@ -8,4 +8,5 @@ Mostly based on the importation of csv files -> as DataFrame objects.
 Because datasets are small a few check steps consist on having a direct observation of the data throughout the process.
 
 # Disclaimer
-This is a first approach on solving the problem of small dataset. Codes here are to ba taken as draft so do not hesitate to point out incoherency and improvements points
+This is a first approach on solving the problem of small dataset. 
+- Codes here are to be taken as draft so do not hesitate to point out incoherency and improvements points
