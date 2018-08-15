@@ -351,6 +351,11 @@ def predict_skewed_dist(class_targ,elem,data,pred=[]):
     #Input data needs to be skewed
     ######
     
+    #class_targ gives the target - parameter to predict
+    #elem corresponds to the name of the target - will appear on graphs and saved files
+    #data is the dataframe the program works on
+    #pred is a list of the predictors used to build the model
+    
     ######
     #make prediction from dataset and stores the result in a new csv file
     #
