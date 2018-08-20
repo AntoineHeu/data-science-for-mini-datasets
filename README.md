@@ -19,6 +19,9 @@ the codes presented here are:
   - First steps is to predict if the value is either an outlier or an inlier (modelized as a probability: 3 anomaly detection algorithms are fitted so probabilities ranges in O, O.33, O.66 or 1)
   - the predicted value is a weighted average of the models for outliers and inliers - weights being the probability of being an outlier or an inlier
 
+- Basic_visualisation
+  - this codes aims to propose various function that might be usefull for exploratory data analysis and basic statistics comparisons
+  
 - to be continued...
 
 For more additionnal elements on the programs, please visit the branch associated to the program of interest
