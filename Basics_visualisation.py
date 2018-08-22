@@ -78,6 +78,56 @@ def basic_stat_comparaison(dataset1,dataset2,list_elem,nom_save,scale=False):
             nom='box plot_%s.png'%(name+'_'+nom_save)
             fig.savefig(nom)
             plt.clf()
+        
+def box_plot(dataframe,nom_classifier,nom_elem):
+    #Function that saves two figures: one box plot of a data distribution and one swarm plot of the same data according to a classifier
+    #Example run on that code: Mercury concentration according to the lithology
+        
+    ##################
+    #parameters:
+    #dataframe is the tabular dataset
+    #nom_classifier is column name of the data used to classify
+    #nom_elem is the column name of the data you want to characterize the distribution
+    ##################
+
+    #what to write on the legend - to be adapted
+    legend={'ASG': 'Alluvions sablo-graveleux','DB':'dalles béton - enrobé','SGN':'sables et graviers noirs','MC':'Marnes et calcaires','SGG': 'sables et graviers gris','AS':'Argiles et silex','ASG_o':'Alluvions sablo-graveleux avec odeurs','CC':'Charbon concassé'}
+
+    codes=list(dataframe[nom_classifier].astype('category').cat.categories)
+    global df_bp,dict_prop
+    df_bp=pd.concat([dataframe[nom_classifier],dataframe[nom_elem]],axis=1)
+    
+    #Swarm plot: plotting the distribution of a variable according to a classifier
+    ident=nom_elem
+    figure2 = plt.figure(figsize = (10,10))
+    splot=sns.swarmplot(df_bp.iloc[:,0],df_bp.iloc[:,1])
+    splot.set_xlim(-1,len(codes))
+    plt.ylabel('distribution en fonction de la géologie décrite sur le terrain')
+    plt.title(ident,size=20)
+    plt.xlabel(nom_classifier,size=20)
+    plt.ylabel(nom_elem,size=20)
+    plt.legend(legend.items())
+    plt.tight_layout(pad=1.5, w_pad=1.5, h_pad=1.5)
+    figure2.savefig("%s_beeswarm.png"%(nom_classifier + '_' + ident))
+    plt.clf()
+    
+    #boxplot: plotting the distribution of a variable
+    df_box=pd.DataFrame()
+    df_box=pd.concat([df_box,dataframe[nom_elem]],axis=1)
+    df_box.dropna(inplace=True)
+    np_box=np.array(df_box)
+    print(df_box)
+    figure3 = plt.figure(figsize = (10,10))
+    sns.boxplot(np_box,sym='k')
+    plt.xlabel(nom_elem,size=20)    
+    plt.ylabel('distribution de %s'%ident,size=20)
+    plt.title(ident,size=20)
+    plt.tight_layout(pad=1.5, w_pad=1.5, h_pad=1.5)
+    figure3.savefig("%s_boxplot.png"%ident)
+    plt.clf()
+    
+
+    return
 
 
 def Lasso_eval(class_targ,elem,data,pred=[]):
