@@ -78,6 +78,8 @@ def basic_stat_comparaison(dataset1,dataset2,list_elem,nom_save,scale=False):
             nom='box plot_%s.png'%(name+'_'+nom_save)
             fig.savefig(nom)
             plt.clf()
+
+    return
         
 def box_plot(dataframe,nom_classifier,nom_elem):
     #Function that saves two figures: one box plot of a data distribution and one swarm plot of the same data according to a classifier
