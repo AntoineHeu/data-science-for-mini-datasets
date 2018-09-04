@@ -13,6 +13,7 @@ This is a first approach on solving the problem of small dataset.
 
 # Programs proposed
 the codes presented here are:
+
 - prediction_skewed
   - predicts continuous values
   - values to predict are separated between inliers, which have there own ElasticNet (scikitlearn) model and outliers, which have a different Elasticnet (scikitlearn) model
@@ -22,6 +23,12 @@ the codes presented here are:
 - Basic_visualisation
   - this codes aims to propose various function that might be usefull for exploratory data analysis and basic statistics comparisons
   
+- prediction_classes
+  - predicts continuous values that can be classified from thresholds (lasso)
+  - direct prediction of classes (logit regression)
+  - compares the result between the two. It is expected that the end purpose is to make a classification as precise as possible
+  - in the logit regression a part of the script creates a .csv files that contains all the predictions for a dataset
+
 - to be continued...
 
 For more additionnal elements on the programs, please visit the branch associated to the program of interest
