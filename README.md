@@ -29,6 +29,14 @@ the codes presented here are:
   - compares the result between the two. It is expected that the end purpose is to make a classification as precise as possible
   - in the logit regression a part of the script creates a .csv files that contains all the predictions for a dataset
 
+- CLustering_with_scoring
+  - clustering algorithm at his early development stage
+  - this is a try of a mix of unlabeled and labeled ML algorithm
+  - the idea is to find the best parameters that both fit the structure of the data and a home-made scoring
+  - the situation: we would like to classify a future dataset with a clustering model - the clusters being themselves related to the classification.
+  - MGMM is preferred for its properties to be extended to probabilities - each clusters would then be assigned to proportions of each classificant present when fitted
+  - the new dataset samples, according to their location from clusters will have probabilities related to the proportions in each cluster
+  
 - to be continued...
 
 For more additionnal elements on the programs, please visit the branch associated to the program of interest
