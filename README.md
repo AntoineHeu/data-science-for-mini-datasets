@@ -29,8 +29,8 @@ the codes presented here are:
   - compares the result between the two. It is expected that the end purpose is to make a classification as precise as possible
   - in the logit regression a part of the script creates a .csv files that contains all the predictions for a dataset
 
-- CLustering_with_scoring
-  - clustering algorithm at his early development stage
+- Clustering_with_scoring
+  - clustering algorithm at his early development stage - context: predicting lithology from chemical analysis of soils samples
   - this is a try of a mix of unlabeled and labeled ML algorithm
   - the idea is to find the best parameters that both fit the structure of the data and a home-made scoring
   - the situation: we would like to classify a future dataset with a clustering model - the clusters being themselves related to the classification.
