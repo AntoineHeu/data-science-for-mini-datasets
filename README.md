@@ -36,6 +36,7 @@ the codes presented here are:
   - the situation: we would like to classify a future dataset with a clustering model - the clusters being themselves related to the classification.
   - MGMM is preferred for its properties to be extended to probabilities - each clusters would then be assigned to proportions of each classificant present when fitted
   - the new dataset samples, according to their location from clusters will have probabilities related to the proportions in each cluster
+  - This classification is compared to a label algorithm (SVM - to be confirmed)
   
 - to be continued...
 
