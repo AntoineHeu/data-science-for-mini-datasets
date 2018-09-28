@@ -10,7 +10,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 sns.set()
 
-import Codeffekt_prediction
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import GridSearchCV, RepeatedKFold
 from sklearn.linear_model import Lasso
